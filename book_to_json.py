@@ -1,30 +1,3 @@
-#!/usr/bin/env python3
-"""
-book_to_json.py — Convert Tamil / English book PDFs into structured JSON.
-
-Handles three kinds of source PDFs:
-  1. Plain Unicode text PDFs (most modern PDFs, English or Tamil)
-  2. Legacy TSCII-encoded Tamil PDFs (old typewriter-style Tamil font,
-     common in scanned religious/literary texts from sites)
-  3. Scanned / image-only PDFs with no text layer at all -> OCR fallback
-
-USAGE
------
-    python book_to_json.py input.pdf --output out.json \
-        --section-regex "பாடல்\\s*\\d+[^\\n]*" \
-        --lang ta
-
-    python book_to_json.py chapters.pdf --output out.json \
-        --section-regex "^Chapter\\s+\\d+.*$" \
-        --lang en
-
-    # Force OCR even if a text layer exists (e.g. text layer is garbage)
-    python book_to_json.py scanned.pdf --output out.json \
-        --section-regex "^Chapter\\s+\\d+.*$" --ocr
-
-Run with --help for all options.
-"""
-
 import argparse
 import json
 import os
