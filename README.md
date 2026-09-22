@@ -73,7 +73,21 @@ Or install the dependencies manually:
 
 pip install PyMuPDF open-tamil pytesseract Pillow
 
-Install Tesseract OCR.
+# Install Tesseract OCR.
+
+# To install Tesseract
+
+winget install --id UB-Mannheim.TesseractOCR
+
+winget --version
+
+tesseract --version
+
+If that fails with "not recognized," find where it installed (commonly C:\Program Files\Tesseract-OCR) and add it to PATH:
+
+$env:Path += ";C:\Program Files\Tesseract-OCR"
+
+[Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\Program Files\Tesseract-OCR", "Machine")
 
 OCR functionality requires the Tesseract OCR application to be installed on your system.
 
