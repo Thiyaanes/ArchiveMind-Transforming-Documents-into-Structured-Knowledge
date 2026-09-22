@@ -1,4 +1,4 @@
-# ArchiveMind - Transforming Documents into Structured Knowledge
+# ArchiveMind-Transforming Documents into Structured Knowledge
 
 ArchiveMind is an open-source multilingual document digitization and structuring pipeline that transforms books, legacy-language PDFs and scanned documents into structured JSON data for AI model training, RAG systems, digital libraries, search platforms and intelligent applications.
 
@@ -20,7 +20,7 @@ ArchiveMind provides a unified pipeline for processing these different document 
 
 # Architecture
 
-```text
+
                          ┌───────────────┐
                          │   PDF / Book  │
                          └───────┬───────┘
@@ -57,11 +57,16 @@ ArchiveMind provides a unified pipeline for processing these different document 
                                 ▼
                          Applications
 
-How to Run
-Clone the repository
-git clone https://github.com/Thiyaanes/ArchiveMind-Transforming-Documents-into-Structured-Knowledge.git
+# How to Run
+# Clone the repository:
+
+git clone Thiyaanes/ArchiveMind-Transforming-Documents-into-Structured-Knowledge.git
+
+
 cd ArchiveMind-Transforming-Documents-into-Structured-Knowledge
-Install dependencies
+
+# Install dependencies:
+
 pip install -r requirements.txt
 
 Or install the dependencies manually:
@@ -74,61 +79,60 @@ OCR functionality requires the Tesseract OCR application to be installed on your
 
 For Tamil OCR, make sure the Tamil language data (tam) is installed.
 
-Usage
-Tamil Book
+# Usage
+# Tamil Book
 python book_to_json.py book.pdf --output output/book.json --section-regex "பாடல்\s*\d+.*" --lang ta
-English Book
+# English Book
 python book_to_json.py book.pdf --output output/book.json --section-regex "^Chapter\s+\d+.*$" --lang en
 
 The --section-regex option allows you to define how chapters, poems, verses, or other sections should be detected.
 
-Project Structure
-book_to_json.py       - Main document processing pipeline
-requirements.txt      - Python dependencies
-output/               - Generated structured JSON files
+# Project Structure
+book_to_json.py - Main document processing pipeline
+requirements.txt - Python dependencies
+output/ - Generated structured JSON files
 PDF / Book input files - Documents processed by the pipeline
-Features
-Extract text from standard Unicode PDFs
-Process legacy Tamil / TSCII encoded documents
-OCR scanned and image-only PDFs
-Automatically detect sections using regular expressions
-Support Tamil and English documents
-Align translations or transliterations with original content
-Generate structured JSON output
-Generate extraction quality information
-Detect OCR pages and TSCII pages
-Identify empty or suspiciously short sections
-Detect potentially garbled text
-Prepare document data for AI training, RAG, search, and digital libraries
-Structured JSON Output
+# Features
+- Extract text from standard Unicode PDFs
+- Process legacy Tamil / TSCII encoded documents
+- OCR scanned and image-only PDFs
+- Automatically detect sections using regular expressions
+- Support Tamil and English documents
+- Align translations or transliterations with original content
+- Generate structured JSON output
+- Generate extraction quality information
+- Detect OCR pages and TSCII pages
+- Identify empty or suspiciously short sections
+- Detect potentially garbled text
+- Prepare document data for AI training, RAG, search, and digital libraries
+# Structured JSON Output
 
 Example output:
 
-{
-  "id": "sec001",
-  "number": 1,
-  "title": "Introduction",
-  "originalLines": [],
-  "translatedLines": [],
-  "syncedLines": []
+{\
+  "id": "sec001",\
+  "number": 1,\
+  "title": "Introduction",\
+  "originalLines": [],\
+  "translatedLines": [],\
+  "syncedLines": []\
 }
-The structured JSON format makes the extracted document content easier to use with:
-AI / LLM training
-RAG systems
-Search engines
-Digital libraries
-Intelligent applications
-Extraction Quality Reports
+# The structured JSON format makes the extracted document content easier to use with:
+- AI / LLM training
+- RAG systems
+- Search engines
+- Digital libraries
+- Intelligent applications
+# Extraction Quality Reports
+# ArchiveMind can provide extraction quality information such as:
 
-ArchiveMind can provide extraction quality information such as:
-
-Number of OCR pages
-Number of TSCII pages
-Number of plain-text pages
-Total number of detected sections
-Empty sections
-Suspiciously short sections
-Potentially garbled text
+- Number of OCR pages
+- Number of TSCII pages
+- Number of plain-text pages
+- Total number of detected sections
+- Empty sections
+- Suspiciously short sections
+- Potentially garbled text
 
 For more details, see the comments and documentation in the project files.
 
