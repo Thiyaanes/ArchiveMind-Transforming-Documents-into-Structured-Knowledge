@@ -75,7 +75,7 @@ pip install PyMuPDF open-tamil pytesseract Pillow
 
 # Install Tesseract OCR.
 
-# To install Tesseract
+To install Tesseract
 
 winget install --id UB-Mannheim.TesseractOCR
 
