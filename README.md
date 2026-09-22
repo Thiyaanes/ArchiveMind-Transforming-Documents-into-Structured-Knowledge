@@ -1,7 +1,8 @@
-# ArchiveMind-Transforming Documents into Structured Knowledge
+# ArchiveMind - Transforming Documents into Structured Knowledge
+
 ArchiveMind is an open-source multilingual document digitization and structuring pipeline that transforms books, legacy-language PDFs and scanned documents into structured JSON data for AI model training, RAG systems, digital libraries, search platforms and intelligent applications.
 
-Unstructured Documents → Extraction → OCR / Encoding Recovery → Structured JSON → Model Training & Applications
+**Unstructured Documents → Extraction → OCR / Encoding Recovery → Structured JSON → Model Training & Applications**
 
 # ArchiveMind
 
@@ -9,15 +10,17 @@ Documents are often created for humans to read, but AI systems and software appl
 
 Real-world document collections can contain:
 
- Unicode text PDFs
- Legacy Tamil / TSCII encoded documents
- Scanned and image-only PDFs
- Different chapter and section formats
- Separate translations or transliterations
+- Unicode text PDFs
+- Legacy Tamil / TSCII encoded documents
+- Scanned and image-only PDFs
+- Different chapter and section formats
+- Separate translations or transliterations
 
 ArchiveMind provides a unified pipeline for processing these different document formats and converting their content into structured JSON.
 
 # Architecture
+
+```text
                          ┌───────────────┐
                          │   PDF / Book  │
                          └───────┬───────┘
@@ -54,25 +57,24 @@ ArchiveMind provides a unified pipeline for processing these different document 
                                 ▼
                          Applications
 
-# How to Run
-
-# Clone the repository:
+How to Run
+Clone the repository
 git clone https://github.com/Thiyaanes/ArchiveMind-Transforming-Documents-into-Structured-Knowledge.git
 cd ArchiveMind-Transforming-Documents-into-Structured-Knowledge
-# Install dependencies:
+Install dependencies
 pip install -r requirements.txt
 
 Or install the dependencies manually:
 
 pip install PyMuPDF open-tamil pytesseract Pillow
+
 Install Tesseract OCR.
 
 OCR functionality requires the Tesseract OCR application to be installed on your system.
 
 For Tamil OCR, make sure the Tamil language data (tam) is installed.
 
-# Usage
-
+Usage
 Tamil Book
 python book_to_json.py book.pdf --output output/book.json --section-regex "பாடல்\s*\d+.*" --lang ta
 English Book
@@ -80,16 +82,12 @@ python book_to_json.py book.pdf --output output/book.json --section-regex "^Chap
 
 The --section-regex option allows you to define how chapters, poems, verses, or other sections should be detected.
 
-# Project Structure
-
-
-book_to_json.py - Main document processing pipeline
-requirements.txt - Python dependencies
-output/ - Generated structured JSON files
+Project Structure
+book_to_json.py       - Main document processing pipeline
+requirements.txt      - Python dependencies
+output/               - Generated structured JSON files
 PDF / Book input files - Documents processed by the pipeline
-
-# Features
-
+Features
 Extract text from standard Unicode PDFs
 Process legacy Tamil / TSCII encoded documents
 OCR scanned and image-only PDFs
@@ -114,9 +112,7 @@ Example output:
   "translatedLines": [],
   "syncedLines": []
 }
-
-# The structured JSON format makes the extracted document content easier to use with:
-
+The structured JSON format makes the extracted document content easier to use with:
 AI / LLM training
 RAG systems
 Search engines
@@ -124,8 +120,7 @@ Digital libraries
 Intelligent applications
 Extraction Quality Reports
 
-
-# ArchiveMind can provide extraction quality information such as:
+ArchiveMind can provide extraction quality information such as:
 
 Number of OCR pages
 Number of TSCII pages
