@@ -1,6 +1,6 @@
-# ArchiveMind-Transforming Documents into Structured Knowledge
+# ArchiveMind-Transforming Tamil and English Documents into Structured Knowledge
 
-ArchiveMind is an open-source multilingual document digitization and structuring pipeline that transforms books, legacy-language PDFs and scanned documents into structured JSON data for AI model training, RAG systems, digital libraries, search platforms and intelligent applications.
+ArchiveMind is an open-source multilingual(Tamil and English) document digitization and structuring pipeline that transforms books, legacy-language PDFs and scanned documents into structured JSON data for AI model training, RAG systems, digital libraries, search platforms and intelligent applications.
 
 **Unstructured Documents → Extraction → OCR / Encoding Recovery → Structured JSON → Model Training & Applications**
 
