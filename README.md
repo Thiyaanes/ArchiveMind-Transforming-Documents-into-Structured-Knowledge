@@ -119,6 +119,17 @@ PDF / Book input files - Documents processed by the pipeline
 - Identify empty or suspiciously short sections
 - Detect potentially garbled text
 - Prepare document data for AI training, RAG, search, and digital libraries
+
+# Performance
+
+ArchiveMind converted a 2,191-page Tamil book into structured JSON in just 8.83 seconds, achieving an average processing speed of 248.13 pages per second.
+
+- Pages processed: 2,191
+- Total conversion time: 8.83 seconds
+- Processing speed: 248.13 pages/second
+- Sections detected: 1,331
+- Content lines converted: 43,354
+- Output JSON lines: 276,092
 # Structured JSON Output
 
 Example output:
